@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Development Portfolio</title>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 40%; /* You can adjust this width based on your design */
+}
+
+.project-name {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Increase the height as needed */
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('jWrKxA.png'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+.project-name:hover .project-overlay {
+  animation: slide-up 0.5s forwards;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+
+@keyframes slide-up {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.project img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.project h2,
+.project p {
+  margin: 10px;
+}
+
+.project h2 {
+  color: #fff;
+}
+
+.project p {
+  color: #ccc;
+}
+
+.project-overlay h2,
+.project-overlay p {
+  margin: 0;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .project {
+    width: 80%;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Game Development Portfolio</h1>
+</header>
+<div class="container">
+  <div class="project">
+    <div class="project-name">
+      <div class="project-image"></div>
+      <div class="project-overlay">
+        <h2>Game Title 1</h2>
+        <p>Description of Game 1.</p>
+      </div>
+    </div>
+  </div>
+  <div class="project">
+    <div class="project-name">
+      <div class="project-image"></div>
+      <div class="project-overlay">
+        <h2>Game Title 2</h2>
+        <p>Description of Game 2.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Add more projects here -->
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags and other links -->
+    <style>
+      /* Your existing CSS styles */
+
+      /* New CSS for the vertical filling line */
+      .filling-line {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 4px; /* Adjust the width as needed */
+        background-color: #fff; /* Color of the filling line */
+        z-index: 100; /* Ensure it's above other elements */
+        transition: height 0.5s ease; /* Smooth transition effect */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your existing HTML content -->
+    <div class="filling-line"></div>
+    
+  </body>
+  <script>
+    // JavaScript to handle the filling line
+    window.addEventListener("scroll", function() {
+      var scrollTop = window.scrollY;
+      var docHeight = document.body.scrollHeight;
+      var winHeight = window.innerHeight;
+      var scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+      var fillingLine = document.querySelector(".filling-line");
+      fillingLine.style.height = scrollPercent + "%";
+    });
+  </script>
+</html>
